@@ -29,4 +29,13 @@ object ValuesVariablesTypes extends App{
   var aVariable: Int = 4
 
   aVariable = 5 // side effects
+
+
+
+  //표현식
+  val str= { //code block
+    val a = 10 // side effects
+    val b = 20
+  }
+
 }

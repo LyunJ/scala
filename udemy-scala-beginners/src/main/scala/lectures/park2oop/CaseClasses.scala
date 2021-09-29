@@ -4,8 +4,8 @@ object CaseClasses extends App {
   /*
   equals, hashCode, toString
    */
-
   case class Person(name:String, age: Int)
+//  class Person(val name: String, age: Int)
 
   // 1. class parameters are fields
   val jim = new Person("Jim", 34)

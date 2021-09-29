@@ -1,5 +1,7 @@
 package lectures.park1basics
 
+import lectures.park1basics.Function.aRepeatedFunction
+
 import scala.annotation.tailrec
 
 object Recursion extends App {
@@ -33,6 +35,10 @@ object Recursion extends App {
    * 3. Fibonacci function, tail recursive
    */
 
+  def aRepeatedFunction(aString: String, n: Int): String = {
+    if (n == 1) aString
+    else aString + aRepeatedFunction(aString,n-1)
+  }
   def concatString(n: Int, aString: String): String = {
     @tailrec
     def concatHelper(count: Int, result: String, addString: String): String = {
@@ -59,7 +65,6 @@ object Recursion extends App {
     def fiboTailrec(i: Int, last: Int, nextToLast: Int): Int =
       if(i >= n) last
       else fiboTailrec(i + 1, last + nextToLast, last)
-
     if (n <= 2) 1
     else fiboTailrec(2, 1, 1)
   }

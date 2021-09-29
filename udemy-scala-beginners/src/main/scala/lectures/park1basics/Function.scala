@@ -6,11 +6,14 @@ object Function extends App {
   }
 
   println(aFunction("hello",3))
+  println("hello" + " " + 3)
 
   def aParameterlessFunction(): Int = 42
   println(aParameterlessFunction())
   println(aParameterlessFunction)
 
+  // 재귀함수
+  // for -> 함수를 사용한 재귀함수
   def aRepeatedFunction(aString: String, n: Int): String = {
     if (n == 1) aString
     else aString + aRepeatedFunction(aString,n-1)
